@@ -1,0 +1,14 @@
+# generated from rosidl_protozero_generator_cpp/rosidl_protozero_generator_cpp-extras.cmake
+find_package(rclcpp REQUIRED QUIET)
+find_package(rosidl_protozero_runtime REQUIRED QUIET)
+find_package(Python3 REQUIRED QUIET COMPONENTS Interpreter)
+
+# use the same type of library
+set(rosidl_protozero_generator_cpp_LIBRARY_TYPE "@rosidl_protozero_generator_cpp_LIBRARY_TYPE@")
+
+include("${CMAKE_CURRENT_LIST_DIR}/register_cpp.cmake")
+rosidl_protozero_generator_cpp_extras(
+        "${rosidl_protozero_generator_cpp_DIR}/../../../lib/rosidl_protozero_generator_cpp/rosidl_protozero_generator_cpp"
+        "${rosidl_protozero_generator_cpp_DIR}/../../../@PYTHON_INSTALL_DIR@/rosidl_protozero_generator_cpp/__init__.py"
+        "${rosidl_protozero_generator_cpp_DIR}/../resource"
+)

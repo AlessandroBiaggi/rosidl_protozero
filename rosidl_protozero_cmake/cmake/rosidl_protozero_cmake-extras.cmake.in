@@ -1,0 +1,5 @@
+# generated from rosidl_protozero_cmake/cmake/rosidl_protozero_cmake-extras.cmake.in
+
+set(@PROJECT_NAME@_IDL_FILES "@_rosidl_protozero_cmake_IDL_FILES@")
+set(@PROJECT_NAME@_INTERFACE_FILES "@_rosidl_protozero_cmake_INTERFACE_FILES@")
+set(@PROJECT_NAME@_DEPENDENCY_TUPLES "@_rosidl_protozero_cmake_DEPENDENCY_TUPLES@")

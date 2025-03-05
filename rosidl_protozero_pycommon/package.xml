@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rosidl_protozero_pycommon</name>
+  <version>0.1.0</version>
+  <description>
+    Common Python functions used by rosidl_protozero packages.
+  </description>
+
+  <maintainer email="biaggi.alessandro.official@gmail.com">Alessandro Biaggi</maintainer>
+  <license>Apache License 2.0</license>
+  <author email="biaggi.alessandro.official@gmail.com">Alessandro Biaggi</author>
+
+  <url type="repository">https://github.com/AlessandroBiaggi/rosidl_candb</url>
+  <url type="bugtracker">https://github.com/AlessandroBiaggi/rosidl_candb/issues</url>
+
+  <buildtool_depend>python3</buildtool_depend>
+  <buildtool_depend>python3-setuptools</buildtool_depend>
+
+  <exec_depend>python3</exec_depend>
+  <exec_depend>python3-protobuf</exec_depend>
+  <exec_depend>python3-empy</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+    <architecture_independent/>
+  </export>
+</package>

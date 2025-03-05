@@ -1,0 +1,13 @@
+# generated from
+# rosidl_protozero_adapter/rosidl_protozero_adapter-extras.cmake.in
+
+find_package(Python3 REQUIRED QUIET COMPONENTS Interpreter)
+
+include("${rosidl_protozero_adapter_DIR}/register_adapter.cmake")
+include("${rosidl_protozero_adapter_DIR}/rosidl_protozero_adapt_interfaces.cmake")
+
+rosidl_protozero_adapter_c_extras(
+        "${rosidl_protozero_adapter_DIR}/../../../lib/rosidl_protozero_adapter/rosidl_protozero_adapter"
+        "${rosidl_protozero_adapter_DIR}/../../../@PYTHON_INSTALL_DIR@/rosidl_protozero_adapter/__init__.py"
+        "${rosidl_protozero_adapter_DIR}/../resource"
+)

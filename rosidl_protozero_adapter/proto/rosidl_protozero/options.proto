@@ -1,0 +1,50 @@
+syntax = "proto2";
+
+import "google/protobuf/descriptor.proto";
+
+package rosidl_protozero;
+
+enum RosidlType {
+  ROSIDL_TYPE_AUTO = 0;
+  ROSIDL_TYPE_BOOLEAN = 1;
+  ROSIDL_TYPE_BYTE = 2;
+  ROSIDL_TYPE_CHAR = 3;
+  ROSIDL_TYPE_FLOAT32 = 4;
+  ROSIDL_TYPE_FLOAT64 = 5;
+  ROSIDL_TYPE_INT8 = 6;
+  ROSIDL_TYPE_UINT8 = 7;
+  ROSIDL_TYPE_INT16 = 8;
+  ROSIDL_TYPE_UINT16 = 9;
+  ROSIDL_TYPE_INT32 = 10;
+  ROSIDL_TYPE_UINT32 = 11;
+  ROSIDL_TYPE_INT64 = 12;
+  ROSIDL_TYPE_UINT64 = 13;
+  ROSIDL_TYPE_STRING = 14;
+  ROSIDL_TYPE_WSTRING = 15;
+}
+
+enum RosidlSequenceSize {
+  ROSIDL_SEQUENCE_DYNAMIC_SIZE = 0;
+  ROSIDL_SEQUENCE_FIXED_SIZE = 1;
+  ROSIDL_SEQUENCE_BOUNDED_SIZE = 2;
+}
+
+message RosidlProtozeroOptions {
+  optional RosidlType type = 50000 [default = ROSIDL_TYPE_AUTO];
+  optional bool optional = 50001 [default = false];
+
+  optional RosidlSequenceSize sequence_size = 50002 [default = ROSIDL_SEQUENCE_DYNAMIC_SIZE];
+  optional uint32 sequence_capacity = 50003 [default = 0];
+}
+
+extend google.protobuf.FieldOptions {
+  optional RosidlProtozeroOptions rosidl_field = 50000;
+}
+
+extend google.protobuf.EnumOptions {
+  optional RosidlProtozeroOptions rosidl_enum = 50000;
+}
+
+extend google.protobuf.OneofOptions {
+  optional RosidlProtozeroOptions rosidl_oneof = 50000;
+}

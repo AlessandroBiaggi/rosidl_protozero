@@ -1,0 +1,3 @@
+[submodule "protozero"]
+	path = rosidl_protozero_runtime/protozero
+	url = https://github.com/mapbox/protozero.git
